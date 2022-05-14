@@ -1,3 +1,4 @@
+// need to import global js here
 import './axios/global';
 import Title from './components/Title';
 import Setup from './examples/globalInstance';
