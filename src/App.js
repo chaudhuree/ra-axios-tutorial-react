@@ -1,5 +1,6 @@
+import './axios/global';
 import Title from './components/Title';
-import Setup from './examples/post-request';
+import Setup from './examples/globalInstance';
 function App() {
   return (
     <main>
