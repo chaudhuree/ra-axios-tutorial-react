@@ -1,5 +1,5 @@
 import Title from './components/Title';
-import Setup from './examples/axiosGET';
+import Setup from './examples/headers';
 function App() {
   return (
     <main>

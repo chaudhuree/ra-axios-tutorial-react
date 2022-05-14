@@ -1,15 +1,27 @@
-import { useState } from 'react';
 import axios from 'axios';
+import { useState } from 'react';
 
 const url = 'https://icanhazdadjoke.com/';
 // Accept : 'application/json'
 
 const Headers = () => {
-  const [joke, setJoke] = useState('random dad joke');
+  const [joke, setJoke] = useState(null);
 
   const fetchDadJoke = async () => {
-    console.log('fetch dad joke');
-  };
+    try {
+      const response = await axios(url,{
+        headers:{
+          Accept: 'application/json'
+        }
+      })
+      const {data}=response;
+      setJoke(data.joke)
+
+    } catch (error) {
+      console.log(error.response);
+    }
+    }
+
 
   return (
     <section className='section text-center'>
